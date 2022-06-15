@@ -26,10 +26,30 @@
   &__desc {
     width: 55%;
     padding: 115px 0;
+
+    @media(max-width: 954px) {
+      text-align: center;
+      font-size: 8vw !important;
+      max-width: 80%;
+      margin: 0 auto
+    }
   }
 
   &__extra {
     width: 45%;
+  }
+
+  @media(max-width: 954px) {
+
+    &__desc {
+      width: 100%;
+      padding: 10vw 20px;
+    }
+  
+    &__extra {
+      width: 100%;
+      padding: 0 20px;
+    }
   }
 
   &__tag {
@@ -37,6 +57,10 @@
     flex-wrap: wrap;
     margin-bottom: 125px;
     margin-top: 31px;
+
+    @media(max-width: 954px) {
+      display: none;
+    }
   }
 
   &__tag-item {
@@ -49,17 +73,32 @@
   &__cta-button {
     padding-left: 18%;
 
+    @media(max-width: 954px) {
+      padding: 0;
+      text-align: center;
+      margin-bottom: 82px;
+    }
+
     a.btn-custom-cta {
       width: 310px;
       height: 75px;
       background-image: url('../../../images/button.png');
-      background-repeat: none;
+      background-repeat: no-repeat;
       background-size: contain;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 10px;
+
+      @media(max-width: 954px) {
+        margin: 0 auto;
+      }
+
+      @media(max-width: 400px) {
+        width: 240px;
+        height: 57px;
+      }
 
       span {
         display: inline-block;
@@ -76,6 +115,15 @@
     line-height: 28px;
     width: 191px;
     max-width: 100%;
+
+    @media(max-width: 954px) {
+      display: inline-block;
+    }
+
+    @media(max-width: 400px) {
+      font-size: 16px;
+      width: 100%;
+    }
   }
 }
 

@@ -83,7 +83,10 @@ class Elementor_ProductCateMenu_Widget extends \Elementor\Widget_Base {
         <?php if($terms && count($terms) > 0) {
           foreach($terms as $index => $term) { ?>
           <li class="p-term-list__item">
-            <a href="<?php echo get_term_link($term, 'product_cat') ?>"><?php echo $term->name ?></a>
+            <a href="<?php echo get_term_link($term, 'product_cat') ?>">
+							<span class="__icon-arrow"><?php echo hfp_icon('arrow_next'); ?></span>
+							<?php echo $term->name ?>
+						</a>
           </li> 
         <?php }} ?>
         </ul>

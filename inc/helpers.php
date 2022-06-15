@@ -30,6 +30,11 @@ function hfp_build_widget_option_all_product_cats() {
   return $o;
 }
 
+function hfp_icon($name = '') {
+  $icons = require(HFP_DIR . '/inc/svg.php');
+  return isset($icons[$name]) ? $icons[$name] : '';
+}
+
 // add_action('init', function() {
 //   var_dump(array_map(function($item) {
 //     return [

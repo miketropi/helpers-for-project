@@ -1,0 +1,50 @@
+.e-product-cate-menu {
+
+  &__inner {
+    padding: 45px 55px;
+    background-color: white;
+
+    .p-term-list {
+      margin: 0;
+      padding: 0;
+
+      &__item {
+        list-style: none;
+        
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        > a {
+          color: #019490;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: var(--content-font);
+          display: flex;
+          align-items: center;
+
+          .__icon-arrow {
+            margin-right: 7px;
+            line-height: 0;
+
+            svg {
+              fill: #6ECCC9;
+              transition: .3s ease;
+              -webkit-transition: .3s ease;
+            }
+          }
+
+          &:hover {
+
+            .__icon-arrow {
+
+              svg {
+                fill: #E4752E;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,10 +25,15 @@ add_action('elementor/elements/categories_registered', 'hfp_add_elementor_widget
 function ccs_register_elementor_widget( $widgets_manager ) {
 
 	require_once( __DIR__ . '/widgets/hero-section.php' );
-	$widgets_manager->register( new \Elementor_HeroSection_Widget() );
+	$widgets_manager->register(new \Elementor_HeroSection_Widget());
 
 	require_once( __DIR__ . '/widgets/product-cate-menu.php' );
-	$widgets_manager->register( new \Elementor_ProductCateMenu_Widget() );
+	$widgets_manager->register(new \Elementor_ProductCateMenu_Widget());
 
+	require_once( __DIR__ . '/widgets/card-grid.php');
+	$widgets_manager->register(new \Elementor_CardGrid_Widget());
+
+	require_once( __DIR__ . '/widgets/products-grid.php');
+	$widgets_manager->register(new \Elementor_ProductsGrid_Widget());
 }
 add_action('elementor/widgets/register', 'ccs_register_elementor_widget');
