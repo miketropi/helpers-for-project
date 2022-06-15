@@ -1,1 +1,77 @@
+/**
+ * Elementor widgets
+ *
+ */
+.e-hero-section {
+  width: 100%;
+}
+.e-hero-section__background-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: cover;
+}
+.e-hero-section__inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.e-hero-section__desc {
+  width: 55%;
+  padding: 115px 0;
+}
+.e-hero-section__extra {
+  width: 45%;
+}
+.e-hero-section__tag {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 125px;
+  margin-top: 31px;
+}
+.e-hero-section__tag-item:not(:last-child) {
+  margin-right: 20px;
+}
+.e-hero-section__cta-button {
+  padding-left: 18%;
+}
+.e-hero-section__cta-button a.btn-custom-cta {
+  width: 310px;
+  height: 75px;
+  background-image: url("../../../images/button.png");
+  background-repeat: none;
+  background-size: contain;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.e-hero-section__cta-button a.btn-custom-cta span {
+  display: inline-block;
+  padding-right: 25%;
+}
+.e-hero-section__cta-text {
+  font-family: var(--content-font);
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFA66D;
+  line-height: 28px;
+  width: 191px;
+  max-width: 100%;
+}
 
+.__custom-color {
+  color: #6ECCC9;
+}
+
+/*# sourceMappingURL=helpers-for-project.bundle.css.map*/

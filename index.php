@@ -10,6 +10,10 @@
  * Text Domain: hfp
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 {
   /**
    * Define
@@ -27,4 +31,6 @@
   require(HFP_DIR . '/inc/helpers.php');
   require(HFP_DIR . '/inc/hooks.php');
   require(HFP_DIR . '/inc/ajax.php');
+
+  require(HFP_DIR . '/inc/elementor-load.php');
 }
