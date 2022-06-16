@@ -15,9 +15,19 @@
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .e-hero-section {
+    min-height: calc(100vh - 55px);
+  }
+}
 .e-hero-section .__decorate {
   position: absolute;
   z-index: 2;
+}
+@media (max-width: 767px) {
+  .e-hero-section .__decorate {
+    display: none;
+  }
 }
 .e-hero-section .__decorate.__decorate-1 {
   left: 0;
@@ -26,6 +36,24 @@
 .e-hero-section .__decorate.__decorate-2 {
   right: 0;
   bottom: -30px;
+}
+.e-hero-section .__decorate-mb {
+  position: absolute;
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .e-hero-section .__decorate-mb {
+    display: none;
+  }
+}
+.e-hero-section .__decorate-mb.__decorate-mb-1 {
+  left: 0;
+  top: 50%;
+  z-index: 11;
+}
+.e-hero-section .__decorate-mb.__decorate-mb-2 {
+  right: 0;
+  top: 13%;
 }
 .e-hero-section__background-layer {
   position: absolute;
@@ -36,7 +64,12 @@
   z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: cover;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  .e-hero-section__background-layer {
+    background-image: url(../../../images/Mobile.png) !important;
+  }
 }
 .e-hero-section__inner {
   position: relative;
@@ -46,6 +79,13 @@
   align-items: top;
   justify-content: space-between;
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .e-hero-section__inner {
+    position: absolute;
+    height: 100%;
+    display: block;
+  }
 }
 .e-hero-section__desc {
   width: 55%;
@@ -59,8 +99,25 @@
     margin: 0 auto;
   }
 }
+@media (max-width: 767px) {
+  .e-hero-section__desc {
+    position: absolute;
+    top: 45%;
+    font-size: 43px !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 .e-hero-section__extra {
   width: 45%;
+}
+@media (max-width: 767px) {
+  .e-hero-section__extra {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 @media (max-width: 954px) {
   .e-hero-section__desc {
@@ -127,7 +184,7 @@
   font-family: var(--content-font);
   font-size: 24px;
   font-weight: 500;
-  color: #FFA66D;
+  color: #ffa66d;
   line-height: 28px;
   width: 191px;
   max-width: 100%;
@@ -145,7 +202,7 @@
 }
 
 .__custom-color {
-  color: #6ECCC9;
+  color: #6eccc9;
 }
 
 .e-product-cate-menu__inner {

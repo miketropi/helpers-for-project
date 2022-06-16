@@ -171,6 +171,8 @@ class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
 			<div class="e-hero-section__background-layer" style="background-image: url(<?php echo $background_url; ?>);"></div>
 			<div class="__decorate __decorate-1"><img src="<?php echo HFP_URI . '/images/texture-1.png' ?>" alt="#"></div>
 			<div class="__decorate __decorate-2"><img src="<?php echo HFP_URI . '/images/texture-2.png' ?>" alt="#"></div>
+			<div class="__decorate-mb __decorate-mb-1"><img src="<?php echo HFP_URI . '/images/hero-left-mb.png' ?>" alt="#"></div>
+			<div class="__decorate-mb __decorate-mb-2"><img src="<?php echo HFP_URI . '/images/hero-right-mb.png' ?>" alt="#"></div>
 			<div class="e-hero-section__inner">
 				<div class="e-hero-section__desc" <?php echo $this->get_render_attribute_string( 'content' ); ?>><?php echo $settings['content']; ?></div>
 				<div class="e-hero-section__extra">	
