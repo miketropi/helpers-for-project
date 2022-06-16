@@ -1,5 +1,22 @@
 .e-hero-section {
   width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .__decorate {
+    position: absolute;
+    z-index: 2;
+
+    &.__decorate-1{
+      left: 0;
+      top: 0;
+    }
+
+    &.__decorate-2{
+      right: 0;
+      bottom: -30px;
+    }
+  }
 
   &__background-layer {
     position: absolute;
