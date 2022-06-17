@@ -14,7 +14,15 @@
         &:not(:last-child) {
           margin-bottom: 20px;
         }
-
+        &.active-item{
+          > a {
+            .__icon-arrow {
+              svg {
+                fill: #E4752E;
+              }
+            }
+          }
+        }
         > a {
           color: #019490;
           font-size: 16px;

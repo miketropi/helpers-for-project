@@ -158,6 +158,18 @@ class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'content_custom_color',
+			[
+				'label' => esc_html__('Content Custom Color', 'hfp'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#6ECCC9',
+				'selectors' => [
+					'{{WRAPPER}} .e-hero-section__desc .__custom-color' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
 		$this->end_controls_section();
   }
 

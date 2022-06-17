@@ -92,7 +92,10 @@ class Elementor_ProductsGrid_Widget extends \Elementor\Widget_Base {
             <h2 class="woocommerce-loop-product__title">
               <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
             </h2>
-            <?php echo '<div class="star-rating"><span style="width:' . ( ( $average / 5 ) * 100 ) . '%"><strong itemprop="ratingValue" class="rating">' . $average . '</strong> ' . __('out of 5', 'woocommerce') . '</span></div>'; ?>
+            <div class="prod-star-rating">
+								<span class="prod-star prod-star-df"></span>
+								<span class="prod-star prod-star-active" style="width:<?= (($average / 5) * 100) ?>%"><span></span></span>
+							</div>
             <?php if (!$product->get_short_description()) return; ?>
               <div itemprop="description" class="product-description">
                 <?php echo apply_filters('woocommerce_short_description', $product->get_short_description()) ?>
