@@ -228,11 +228,12 @@
   font-weight: 500;
   font-family: var(--content-font);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .e-product-cate-menu__inner .p-term-list__item > a .__icon-arrow {
   margin-right: 7px;
   line-height: 0;
+  margin-top: 8px;
 }
 .e-product-cate-menu__inner .p-term-list__item > a .__icon-arrow svg {
   fill: #6ECCC9;
