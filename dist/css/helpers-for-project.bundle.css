@@ -440,6 +440,7 @@
   justify-content: center;
   margin: 0 !important;
   color: white;
+  font-family: var(--content-font);
   font-size: 15px;
   text-transform: uppercase;
   height: 48px;
