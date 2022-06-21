@@ -201,4 +201,7 @@
 
 .__custom-color {
   color: #6eccc9;
+  @media (max-width: 767px) {
+    color: #6eccc9 !important;
+  }
 }
