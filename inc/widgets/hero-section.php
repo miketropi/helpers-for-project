@@ -186,7 +186,16 @@ class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
 			<div class="__decorate-mb __decorate-mb-1"><img src="<?php echo HFP_URI . '/images/hero-left-mb.png' ?>" alt="#"></div>
 			<div class="__decorate-mb __decorate-mb-2"><img src="<?php echo HFP_URI . '/images/hero-right-mb.png' ?>" alt="#"></div>
 			<div class="e-hero-section__inner">
-				<h1 class="e-hero-section__desc" <?php echo $this->get_render_attribute_string( 'content' ); ?>><?php echo $settings['content']; ?></h1>
+				<h1 class="e-hero-section__desc" <?php echo $this->get_render_attribute_string( 'content' ); ?>>
+				<?php
+				if ( is_product_category() ) {
+					woocommerce_page_title();
+				}else{
+					echo $settings['content'];
+				}
+				  ?>
+				
+			</h1>
 				<div class="e-hero-section__extra">	
 					<div class="e-hero-section__tag">
 						<div class="e-hero-section__tag-item">
