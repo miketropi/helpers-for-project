@@ -1,40 +1,47 @@
-<?php 
-if ( ! defined( 'ABSPATH' ) ) {
+<?php
+if (!defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 
-class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
+class Elementor_HeroSection_Widget extends \Elementor\Widget_Base
+{
 
-  /**
+	/**
 	 * Get widget name.
 	 *
 	 */
-	public function get_name() {
+	public function get_name()
+	{
 		return 'hero_section';
 	}
 
-  /**
+	/**
 	 * Get widget title.
 	 *
 	 */
-	public function get_title() {
+	public function get_title()
+	{
 		return esc_html__('Hero Section', 'hfp');
 	}
 
-  public function get_icon() {
+	public function get_icon()
+	{
 		return 'eicon-code';
 	}
 
-  public function get_categories() {
+	public function get_categories()
+	{
 		return ['general', 'hfp'];
 	}
 
-  public function get_keywords() {
+	public function get_keywords()
+	{
 		return ['hero', 'section'];
 	}
 
-  protected function register_controls() {
-    $this->start_controls_section(
+	protected function register_controls()
+	{
+		$this->start_controls_section(
 			'content_section',
 			[
 				'label' => esc_html__('Content', 'hfp'),
@@ -74,7 +81,7 @@ class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'text_before_cta_button',
 			[
-				'label' => esc_html__( 'Text Before CTA Button', 'hfp'),
+				'label' => esc_html__('Text Before CTA Button', 'hfp'),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'default' => esc_html__('Find The Right Product With Our', 'hfp'),
 				'placeholder' => esc_html__('Type your text here', 'hfp'),
@@ -106,7 +113,7 @@ class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
 			[
 				'label' => esc_html__('Content Width', 'hfp'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%' ],
+				'size_units' => ['px', '%'],
 				'range' => [
 					'px' => [
 						'min' => 768,
@@ -171,14 +178,15 @@ class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
 		);
 
 		$this->end_controls_section();
-  }
+	}
 
-  protected function render() {
-    $settings = $this->get_settings_for_display();
+	protected function render()
+	{
+		$settings = $this->get_settings_for_display();
 		$this->add_inline_editing_attributes('content', 'advanced');
 
 		$background_url = $settings['background_image']['url'];
-		?>
+?>
 		<div class="hfp-widget e-hero-section">
 			<div class="e-hero-section__background-layer" style="background-image: url(<?php echo $background_url; ?>);"></div>
 			<div class="__decorate __decorate-1"><img src="<?php echo HFP_URI . '/images/texture-1.png' ?>" alt="#"></div>
@@ -186,17 +194,19 @@ class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
 			<div class="__decorate-mb __decorate-mb-1"><img src="<?php echo HFP_URI . '/images/hero-left-mb.png' ?>" alt="#"></div>
 			<div class="__decorate-mb __decorate-mb-2"><img src="<?php echo HFP_URI . '/images/hero-right-mb.png' ?>" alt="#"></div>
 			<div class="e-hero-section__inner">
-				<h1 class="e-hero-section__desc" <?php echo $this->get_render_attribute_string( 'content' ); ?>>
+
 				<?php
-				if ( is_product_category() ) {
-					woocommerce_page_title();
-				}else{
+				if (is_product_category()) {
+					echo '<div class="e-hero-section__desc" ' . $this->get_render_attribute_string('content') . '>';
 					echo $settings['content'];
+					echo '</div>';
+				} else {
+					echo '<h1 class="e-hero-section__desc" ' . $this->get_render_attribute_string('content') . '>';
+					echo $settings['content'];
+					echo '</h1>';
 				}
-				  ?>
-				
-			</h1>
-				<div class="e-hero-section__extra">	
+				?>
+				<div class="e-hero-section__extra">
 					<div class="e-hero-section__tag">
 						<div class="e-hero-section__tag-item">
 							<img src="<?php echo HFP_URI . '/images/20_years.png' ?>" alt="#">
@@ -221,6 +231,6 @@ class Elementor_HeroSection_Widget extends \Elementor\Widget_Base {
 				</div>
 			</div>
 		</div> <!-- .e-hero-section -->
-		<?php
-  }
+<?php
+	}
 }
