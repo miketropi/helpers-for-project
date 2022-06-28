@@ -79,7 +79,7 @@
   align-items: flex-end;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 30px 15px 110px;
+  padding: 30px 0 110px;
 }
 @media (max-width: 767px) and (orientation: portrait) {
   .e-hero-section__inner {
@@ -89,6 +89,11 @@
     width: 100% !important;
     left: 0;
     top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .e-hero-section__inner {
+    padding: 30px 15px 110px;
   }
 }
 .e-hero-section__desc {

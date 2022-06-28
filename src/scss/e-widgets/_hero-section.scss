@@ -53,6 +53,7 @@
     @media (max-width: 767px) {
       background-image: url(../../../images/Mobile.png) !important;
     }
+    
   }
 
   &__inner {
@@ -63,7 +64,7 @@
     align-items: flex-end;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 30px 15px 110px;
+    padding: 30px 0 110px;
     @media (max-width: 767px) and (orientation: portrait) {
       position: absolute;
       height: 100%;
@@ -71,6 +72,9 @@
       width: 100% !important;
       left: 0;
       top: 0;
+    }
+    @media (max-width: 767px) {
+      padding: 30px 15px 110px;
     }
   }
 
