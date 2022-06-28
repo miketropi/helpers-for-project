@@ -3,7 +3,7 @@
   font-size: 24px;
   font-weight: 500;
   color: #68767B;
-  margin-bottom: 38px;
+  margin-bottom: 25px;
 }
 
 /**
@@ -252,6 +252,7 @@
 .e-product-cate-menu__inner {
   padding: 45px 55px;
   background-color: white;
+  margin-top: 70px;
 }
 .e-product-cate-menu__inner .p-term-list {
   margin: 0;
