@@ -60,9 +60,10 @@
     z-index: 3;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     margin: 0 auto;
+    padding: 30px 15px 110px;
     @media (max-width: 767px) and (orientation: portrait) {
       position: absolute;
       height: 100%;
@@ -75,7 +76,7 @@
 
   &__desc {
     width: 55%;
-    padding: 115px 0;
+    margin: 0;
 
     @media (max-width: 954px) {
       text-align: center;
@@ -103,11 +104,17 @@
 
   &__extra {
     width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     @media (max-width: 767px) and (orientation: portrait) {
       position: absolute;
       bottom: 0%;
       left: 50%;
       transform: translateX(-50%);
+    }
+    @media (max-width: 954px) {
+      align-items: center;
     }
   }
 
@@ -138,9 +145,7 @@
   &__tag {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 125px;
-    margin-top: 31px;
-
+    margin-bottom: 140px;
     @media (max-width: 954px) {
       display: none;
     }
@@ -153,8 +158,7 @@
   }
 
   &__cta-button {
-    padding-left: 18%;
-    margin-bottom: 30px;
+    max-width: 310px;
     @media (max-width: 954px) {
       padding: 0;
       text-align: center;
@@ -197,9 +201,10 @@
     line-height: 28px;
     width: 191px;
     max-width: 100%;
-
+    
     @media (max-width: 954px) {
       display: inline-block;
+      margin-bottom: 10px;
     }
 
     @media (max-width: 400px) {
