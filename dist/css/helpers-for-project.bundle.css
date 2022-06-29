@@ -4,6 +4,21 @@
   font-weight: 500;
   color: #68767B;
   margin-bottom: 25px;
+  padding-bottom: 15px;
+  position: relative;
+}
+.hfp-widget__title::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAckAAAAECAYAAADlPsSvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACBSURBVHgB7dXBDURQFIXhe2Nk2pnNLGY5JehABVpABRKNKEQk2hHh8gRhR2L18n/bc/a/ykHS1KnYmAkAAB5Q0VaD8G9DX5hYfOtrY/7aRgIJAPCJi17XD9Fb5FIgT985kOX3l6kbCSQAwCd79MKgmqP3ufVdA7lsBBIA4JOnAulM8o5amIqRN48AAAAASUVORK5CYII=);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 /**
@@ -250,8 +265,7 @@
 }
 
 .e-product-cate-menu__inner {
-  padding: 45px 55px;
-  background-color: white;
+  padding: 0px 20px 45px;
   border-radius: 5px;
   position: -webkit-sticky;
   position: sticky;
