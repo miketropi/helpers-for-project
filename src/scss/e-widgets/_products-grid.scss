@@ -1,15 +1,18 @@
 .e-products-grid {
     &__inner {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -12px;
-        width: 100%;
-
-        @media (max-width: 500px) {
-            width: 310px;
-            max-width: 100%;
-            margin: 0 auto;
+        .wrap-item{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -12px;
+            width: 100%;
+            
+            @media (max-width: 500px) {
+                width: 310px; 
+                max-width: 100%;
+                margin: 0 auto;
+            }
         }
+        
     }
     .thumb-prod {
         height: 272px;

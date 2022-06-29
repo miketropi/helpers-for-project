@@ -361,14 +361,14 @@
   z-index: -1;
 }
 
-.e-products-grid__inner {
+.e-products-grid__inner .wrap-item {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -12px;
   width: 100%;
 }
 @media (max-width: 500px) {
-  .e-products-grid__inner {
+  .e-products-grid__inner .wrap-item {
     width: 310px;
     max-width: 100%;
     margin: 0 auto;
