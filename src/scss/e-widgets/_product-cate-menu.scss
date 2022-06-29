@@ -3,7 +3,9 @@
   &__inner {
     padding: 45px 55px;
     background-color: white;
-    margin-top: 70px;
+    border-radius: 5px;
+    position: sticky;
+    top: 15px;
     .p-term-list {
       margin: 0;
       padding: 0;

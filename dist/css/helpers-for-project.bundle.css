@@ -252,7 +252,10 @@
 .e-product-cate-menu__inner {
   padding: 45px 55px;
   background-color: white;
-  margin-top: 70px;
+  border-radius: 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
 }
 .e-product-cate-menu__inner .p-term-list {
   margin: 0;
