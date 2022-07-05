@@ -92,7 +92,7 @@ class Elementor_ProductsGrid_Widget extends \Elementor\Widget_Base
                         ?>
                     <?php endwhile; ?>
 
-                    <?php 
+                    <?php
                     foreach (array_chunk($product_array, 3) as $key => $product_group) {
                         echo '<div class="wrap-item">';
                         foreach ($product_group as $key => $id) {
@@ -140,5 +140,6 @@ class Elementor_ProductsGrid_Widget extends \Elementor\Widget_Base
             </div>
         </div>
 <?php
+      wp_reset_query();
     }
 }
