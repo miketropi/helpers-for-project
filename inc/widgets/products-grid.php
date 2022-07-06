@@ -125,9 +125,9 @@ class Elementor_ProductsGrid_Widget extends \Elementor\Widget_Base
                                     $variation_product_id = $product_variations[0]['variation_id'];
                                     $variation_product = new WC_Product_Variation($variation_product_id);
                                 ?>
-                                    <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span><?php echo $variation_product->regular_price; ?></span></span></a>
+                                    <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span><?php echo wc_price($variation_product->regular_price); ?></span></span></a>
                                 <?php } else { ?>
-                                    <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span><?php echo $product->get_regular_price(); ?></span></span></a>
+                                    <span class="price"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol"></span><?php echo wc_price($product->get_regular_price()); ?></span></span></a>
                                 <?php } ?>
                                 <a href="<?php echo get_permalink($id); ?>" class="btn-product-detail">View Product</a>
                             </div>
